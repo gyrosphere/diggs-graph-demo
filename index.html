@@ -3,7 +3,7 @@
 <head>
 
 
- <link rel="stylesheet" href="div.css">
+<link rel="stylesheet" href="div.css">
 <title>Diggs Graph</title>
 <script type="text/javascript" language="javascript" src="jquery-3.2.1.js"></script>
 <script type="text/javascript" language="javascript" src="jquery.flot.js"></script>
@@ -11,9 +11,9 @@
 
 </head>
 <body>
-
-<input type="text" id="fileUpload">
-<button id="removebtn" type="button" onclick="loadXMLDoc()">Get Data</button>
+	<p>Default file name is geosyntec.xml</p>
+	<input type="text" id="fileUpload">
+	<button id="removebtn" type="button" onclick="loadXMLDoc()">Get Data</button>
 
 
 <script >
@@ -44,7 +44,7 @@ function loadXMLDoc()
 function myFunction(xml) { //processes the file to get "percentPassing" and "particleSize"
 
 	try{ //trys to process the file
-		alert("hi");
+		//alert("hi");
 		var i;
 		var xmlDoc = xml.responseXML;
 		
@@ -208,11 +208,11 @@ function myFunction(xml) { //processes the file to get "percentPassing" and "par
 					xaxis: 
 					{
 					//	min: 0,
-						ticks: [0.0001,0.001,0.01,0.1,1,10,100,1000],
+					//	ticks: [0.0001,0.001,0.01,0.1,1,10,100,1000],
 						
-						transform:  function(v) {return Math.log(v+0.0001); /*move away from zero*/} ,
-						tickDecimals: 4 ,
-						tickFormatter: function (v, axis) {return "10" + (Math.round( Math.log(v)/Math.LN10)).toString().sup();}
+					//	transform:  function(v) {return Math.log(v+0.0001); /*move away from zero*/} ,
+					//	tickDecimals: 4 ,
+					//	tickFormatter: function (v, axis) {return "10" + (Math.round( Math.log(v)/Math.LN10)).toString().sup();}
 					}
 						//grid: { hoverable: true, clickable: true , color: "#999"}
 						
